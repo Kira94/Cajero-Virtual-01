@@ -1,0 +1,44 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+	 int saldo_inicial = 1000, opcion;
+	 float extra = 0, retiro, saldo;
+	 
+	 cout<<"\tBIENVENIDO A SU CAJERO VIRTUAL";
+	 cout<<"\nSeleccione alguna de las siguientes opciones: "<<endl;
+	 cout<<"\t1-Consultar saldo."<<endl;
+	 cout<<"\t2-Deposito."<<endl;
+	 cout<<"\t3-Retiro de fondos."<<endl;
+	 cout<<"\t4-Salir."<<endl;
+	 cout<<"\tOpcion: ";
+	 cin>>opcion;
+	 
+	 switch(opcion){
+	 	case 1: cout<<"Su saldo es: "<<saldo_inicial;break;
+	 	case 2: cout<<"Monto a depositar: "; cin>>extra;
+	 	saldo = saldo_inicial + extra;
+	 	cout<<"Su saldo es: "<<saldo; break;
+	 	case 3: cout<<"Monto a retirar: ";
+	 	cin>>retiro;
+	 	
+	 	if(retiro>saldo_inicial)
+	 	{
+	 		cout<<"Fondos insuficientes.";
+	 	}
+	 	else{
+	 		saldo= saldo_inicial-retiro;
+	 		cout<<"Saldo restante en cuenta: "<<saldo;
+	 	}
+	 	break;
+	 	case 4: cout<<"Chaito pescaito."; break;
+	 }
+	
+	
+	
+	
+	
+	return 0;
+	
+}
